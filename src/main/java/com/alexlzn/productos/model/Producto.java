@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "productos")
@@ -25,6 +26,18 @@ public class Producto implements Serializable {
 	private String nombre;
 	private Double precio;
 	
+	//pruebas para Ribbon
+	@Transient
+	private Integer port;
+	
+	public Integer getPort() {
+		return port;
+	}
+
+	public void setPort(Integer port) {
+		this.port = port;
+	}
+
 	@Temporal(TemporalType.DATE)
 	private Date fecha;
 
