@@ -8,4 +8,5 @@ public interface IProductoService {
 
 	public List<Producto> findAll();
 	public Producto findById(Long id);
+	public void guardarProducto(Producto producto);
 }

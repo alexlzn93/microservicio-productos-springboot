@@ -34,4 +34,11 @@ public class ProductoService implements IProductoService {
 		return null;
 	}
 
+	@Override
+	public void guardarProducto(Producto producto) {
+		// Guardando nuevo producto en la base de datos
+		productoDao.save(producto);
+		
+	}
+
 }
